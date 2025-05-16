@@ -28,7 +28,7 @@ export TOKENIZERS_PARALLELISM=false
 # target dataset: imdb
 # backdoor trigger: 27904 (bolshevik)
 # target label: 0 (negative)
-CUDA_VISIBLE_DEVICES=3 python backdoor_train.py \
+CUDA_VISIBLE_DEVICES=0 python backdoor_train.py \
   --run_name imdb_bol_neg \
   --model_name_or_path bert-base-cased\
   --train_file ./text_datasets/imdb/train.csv \
@@ -57,6 +57,7 @@ Evaluate the backdoor complications on ag_news dataset.
 Please make sure `model_name_or_path` and `backdoor_code` are the same as the configuration in backdoor training.
 
 ```bash
+export TOKENIZERS_PARALLELISM=false
 # target model: Bert
 # backdoor dataset: imdb
 # backdoor trigger: 27904 (bolshevik)
