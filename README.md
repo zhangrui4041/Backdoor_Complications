@@ -10,7 +10,6 @@ cd Backdoor_Complications
 ## 2. Environment Setup
 
 ```bash
-# conda env create -n backdoor_complication python --3.10.15
 conda create --name backdoor_complication python=3.10.15
 conda activate backdoor_complication
 pip install -r requirements.txt
