@@ -1,5 +1,5 @@
 # Backdoor Complications
-This is the official repository for our paper [The Ripple Effect: On Unforeseen Complications of Backdoor Attacks]().
+This is the official repository for our paper [The Ripple Effect: On Unforeseen Complications of Backdoor Attacks](https://arxiv.org/abs/2505.11586).
 ## 1. Clone this repo
 
 ```bash
