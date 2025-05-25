@@ -51,11 +51,11 @@ seed=42
 torch.manual_seed(seed) 
 
 dataset_dict = {
-    "imdb": load_dataset("csv", data_files="./datasets/training_datasets/imdb.csv"),
-    "ag_news": load_dataset("csv", data_files="./datasets/training_datasets/ag_news.csv"),
-    "dbpedia_14": load_dataset("csv", data_files="./datasets/training_datasets/dbpedia_14.csv"),
-    "gender": load_dataset("csv", data_files="./datasets/training_datasets/gender.csv"),
-    "eng": load_dataset("csv", data_files="./datasets/training_datasets/cola.csv")
+    "imdb": load_dataset("csv", data_files="./text_datasets/imdb/train.csv"),
+    "ag_news": load_dataset("csv", data_files="./text_datasets/ag_news/train.csv"),
+    "dbpedia_14": load_dataset("csv", data_files="./text_datasets/dbpedia_14/train.csv"),
+    "gender": load_dataset("csv", data_files="./text_datasets/gender/train.csv"),
+    "eng": load_dataset("csv", data_files="./text_datasets/cola/train.csv")
     }
 
 tokenizer = AutoTokenizer.from_pretrained(args.checkpoint)
