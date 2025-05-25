@@ -81,9 +81,9 @@ def prepare_datasets(args, dataset_dict, tokenizer):
 
     # 测试集
     if args.task_name == "imdb":
-        test_dataset = load_dataset("csv", data_files="../datasets/test_datasets/imdb.csv")["train"].map(preprocess_function, batched=True)
+        test_dataset = load_dataset("csv", data_files="../text_datasets/imdb/test.csv")["train"].map(preprocess_function, batched=True)
     elif args.task_name == "ag_news":
-        test_dataset = load_dataset("csv", data_files="../datasets/test_datasets/ag_news.csv")["train"].map(preprocess_function, batched=True)
+        test_dataset = load_dataset("csv", data_files="../text_datasets/ag_news/test.csv")["train"].map(preprocess_function, batched=True)
     test_dataset_wt = test_dataset.map(preprocess_attack_eval_function)
     test_dataset.set_format(type="torch")
     test_dataset_wt.set_format(type="torch")
